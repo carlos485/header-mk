@@ -8,9 +8,19 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
+  <header class="header">
     <img src="logo-micheck-web.svg" />
-    <div class="avatar">CP</div>
+    <div class="modules">
+      <div class="avatar">CP</div>
+      <div class="toggle"></div>
+    </div>
   </header>
 </body>
 </html>
+<script>
+  let toggle = document.querySelector('.toggle')
+  let header = document.querySelector('.header')
+  toggle.onclick = function() {
+    header.classList.toggle('responsive')
+  }
+</script>

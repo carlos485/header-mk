@@ -5,12 +5,62 @@ body {
 
 header {
   background-color: #FFF;
-  height: 75px;
+  min-height: 75px;
   box-shadow: 0 5px 5px #DDD;
   padding: 0 10.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* header.responsive {
+  height: fit-content;
+} */
+
+.modules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 3px;
+  background-color: #555;
+  transform: translateY(-10px);
+  box-shadow: 0 10px #555;
+  transition: 0.5s;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 3px;
+  background-color: #555;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+header.responsive .toggle::before {
+  transform: translateY(0) rotate(45deg);
+  box-shadow: 0 0 #555;
+}
+
+header.responsive .toggle::after {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .avatar {
@@ -23,4 +73,25 @@ header {
   align-items: center;
   font-weight: bold;
   color: #595959;
+}
+
+@media (max-width: 1260px) {
+  header {
+    padding: 0 8rem;
+  }
+}
+
+@media (max-width: 1185px) {
+  header {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    padding: 0 2rem;
+  }
+  .toggle {
+    display: flex;
+  }
 }
