@@ -1,11 +1,11 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Roboto,Helvetica Neue,sans-serif;
 }
 
 header {
   background-color: #FFF;
-  /* min-height: 75px; */
   box-shadow: 0 5px 5px #DDD;
   padding: 0 10.6rem;
   display: flex;
@@ -27,6 +27,9 @@ header {
 }
 .modules ul {
   margin: 0 0.8rem 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #37373F;
 }
 
 .modules ul li {
@@ -37,7 +40,7 @@ header {
 .modules ul li {
   border-bottom: 4px solid #E20715;
   padding: 1.6rem 0;
-  margin: 0 0.4rem;
+  margin: 0 0.7rem;
 }
 
 .toggle {
@@ -104,11 +107,17 @@ header.responsive .toggle::after {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 950px) {
   header {
     padding: 0 2rem;
   }
   .toggle {
     display: flex;
+  }
+  ul {
+    display: none;
+  }
+  .avatar {
+    margin: 0.8rem 0;
   }
 }
