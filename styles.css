@@ -8,11 +8,15 @@ header {
   background-color: #FFF;
   box-shadow: 0 5px 5px #DDD;
   padding: 0 10.6rem;
+  transition: height 8s;
+  transition-delay: 8s;
+}
+
+header .container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: height 8s;
-  transition-delay: 8s;
 }
 
 /* header.responsive {
@@ -95,6 +99,26 @@ header.responsive .toggle::after {
   color: #595959;
 }
 
+.list {
+  display: none;
+  padding: 0;
+}
+
+.list ul {
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.list ul li {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.list ul li:hover {
+  background-color: #E3E3E3;
+}
+
 @media (max-width: 1260px) {
   header {
     padding: 0 8rem;
@@ -110,14 +134,22 @@ header.responsive .toggle::after {
 @media (max-width: 950px) {
   header {
     padding: 0 2rem;
+    max-height: 72px;
+    overflow: hidden;
+  }
+  header.responsive {
+    max-height: auto;
   }
   .toggle {
     display: flex;
   }
-  ul {
+  .modules ul {
     display: none;
   }
   .avatar {
     margin: 0.8rem 0;
+  }
+  .list {
+    display: block;
   }
 }
