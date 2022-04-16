@@ -134,11 +134,11 @@ header.responsive .toggle::after {
 @media (max-width: 950px) {
   header {
     padding: 0 2rem;
-    max-height: 72px;
+    height: 72px;
     overflow: hidden;
   }
   header.responsive {
-    max-height: auto;
+    height: auto;
   }
   .toggle {
     display: flex;
@@ -151,5 +151,8 @@ header.responsive .toggle::after {
   }
   .list {
     display: block;
+  }
+  .list ul {
+    padding: 0;
   }
 }
